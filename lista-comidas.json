@@ -1,0 +1,34 @@
+[
+  {
+    "id": 2,
+    "title": "Torta de chocolate",
+    "price": 500,
+    "ingredients": ["bizcochuelo chocolate", "dulce de leche"],
+    "time_cook": 20,
+    "calories": 100,
+    "vegan": false
+  },
+  {
+    "id": 4,
+    "title": "Salsa blanca",
+    "price": 200.0,
+    "ingredients": ["harina", "leche", "manteca", "nuez moscada"],
+    "time_cook": 20,
+    "calories": 100,
+    "vegan": false,
+    "recipe": [
+      "Disolver 2 cucharadas de harina en 250ml de leche y agregar sal y nuez moscada a gusto",
+      "Llevar a fuego bajo y revolver constantemente para evitar que se queme",
+      "Retirar del fuego cuando la consistencia sea espesa"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Alfajor",
+    "price": 300.0,
+    "ingredients": ["chocolate semiamargo", "dulce de leche", "galletita"],
+    "time_cook": 10,
+    "calories": 300,
+    "vegan": false
+  }
+]
