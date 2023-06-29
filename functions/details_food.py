@@ -1,4 +1,6 @@
-from json_functions import get_json
+# Funcionalidad extra: ver detalle de comida completo. Adaptado para ambos casos (con o sin receta)
+
+from functions.json_functions import get_json
 
 def view_details(element):
     food_list = get_json()

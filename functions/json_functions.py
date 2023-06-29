@@ -8,7 +8,7 @@ dir_actual = getcwd()
 # ------------------TRAER info del json --------------#
 def get_json():
     if file_exists():
-        f = open(dir_actual + "/lista-comidas.json", "r")
+        f = open(dir_actual + "/json/lista-comidas.json", "r")
         json_content = f.read()
         json_parse = json.loads(json_content)
         f.close()
@@ -22,12 +22,12 @@ def update_json(element):
     json_content = get_json()
     json_content.append(element)
 
-    with open(dir_actual + "/lista-comidas.json", "w") as file:
+    with open(dir_actual + "/json/lista-comidas.json", "w") as file:
         file.write(json.dumps(json_content))
 
 # -------------VERIFICA si el archivo existe (Utilizada en la funcion de SAVE) --------------#
 def file_exists():
-    file_exists = exists(dir_actual +"/lista-comidas.json" )
+    file_exists = exists(dir_actual +"/json/lista-comidas.json" )
     return file_exists
 
 
@@ -36,7 +36,7 @@ def file_exists():
 # ejecuta la funcion de update para no sobreescribir y perder los datos previamente guardados
 def save_data(data):
     if not file_exists():
-        with open(dir_actual + "/lista-comidas.json" , "w") as f:
+        with open(dir_actual + "/json/lista-comidas.json" , "w") as f:
 
             #Voy a utilizar una sintaxis expandida, similar al spread operator en javascript
             # para agregar el id al diccionario al guardarlo
@@ -54,7 +54,7 @@ def update_element(element):
             index_to_update = food_list.index(food)
             food_list[index_to_update] = element
 
-    with open(dir_actual + "/lista-comidas.json", "w") as file:
+    with open(dir_actual + "/json/lista-comidas.json", "w") as file:
         file.write(json.dumps(food_list))
 
 
@@ -65,5 +65,5 @@ def delete_json_content(element):
     food_list = get_json()
     food_list.pop(food_list.index(element))
     
-    with open(dir_actual + "/lista-comidas.json", "w") as file:
+    with open(dir_actual + "/json/lista-comidas.json", "w") as file:
         file.write(json.dumps(food_list))

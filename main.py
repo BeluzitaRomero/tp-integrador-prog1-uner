@@ -1,8 +1,8 @@
-import crud_functions as crud
-from json_functions import save_data, delete_json_content, update_element
-from main_filter_function import filter_function
-from recipe_function import add_recipe
-from details_food import view_details
+import functions.crud_functions as crud
+from functions.json_functions import save_data, delete_json_content, update_element
+from functions.main_filter_function import filter_function
+from functions.recipe_function import add_recipe
+from functions.details_food import view_details
 
 def main_function():
     print("1) Mostrar comidas rapidas",

@@ -1,4 +1,4 @@
-import find_functions as filter
+import functions.find_functions as filter
 
 def filter_function(filter_value):
     match filter_value:

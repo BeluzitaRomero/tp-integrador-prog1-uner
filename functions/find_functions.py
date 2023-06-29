@@ -4,8 +4,7 @@
 # ▪ Buscar por calorías.
 # ▪ Las comidas veganas disponibles.
 
-
-from json_functions import get_json
+from functions.json_functions import get_json
 
 def find_by_ingredient(ingredient):
     food_list = get_json()

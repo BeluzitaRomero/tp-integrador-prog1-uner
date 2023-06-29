@@ -1,6 +1,6 @@
 # 3. Generar un mecanismo para agregar a la información existente los pasos para la elaboración de una o
 # varias comidas del menú.
-from json_functions import get_json
+from functions.json_functions import get_json
 
 def add_recipe(element):
     food_list = get_json()
