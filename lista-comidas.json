@@ -6,7 +6,13 @@
     "ingredients": ["bizcochuelo chocolate", "dulce de leche"],
     "time_cook": 20,
     "calories": 100,
-    "vegan": false
+    "vegan": true,
+    "recipe": [
+      "poner el contenido del envase en un bowl junto con 3 huevos y 200ml de leche",
+      "batir 10min a mano o 5 con batidora electrica",
+      "poner la mezcla en molde enmantecado y enharinado y llevar a horno por 60min previamente precalentado",
+      "pinchar el centro y si sale seco, retirar del horno"
+    ]
   },
   {
     "id": 4,

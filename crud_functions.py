@@ -74,27 +74,47 @@ def to_delete(position_in_list):
 
 def to_update(position_in_list):
     food_list = get_json()
+
     print("Cual es la informacion que quiere modificar?:\n1: Titulo\n2: Precio\n3: Ingredientes\n4: Tiempo de coccion\n5: Calorias\n6: Vegano")
     print("---------------------------------------------------------------")
     key_to_update = int(input("Ingrese el numero: "))
 
     to_update = food_list[position_in_list]
 
-    if key_to_update == 3:
-        new_ingredients = []
-        input_ingredients = input("'Enter' para comenzar a ingresar ingredientes. Luego 'fin' para terminar: ").lower()
-        while input_ingredients != "fin":
-            input_ingredients = input("Ingregiente / fin: ").lower()
-            if input_ingredients != 'fin': new_ingredients.append(input_ingredients)
-        keys = list(to_update.keys())
-        to_update[keys[key_to_update]] = new_ingredients
-        updated_food = to_update
-                
-    else:
-        #todo HACER OTRAS CONDICIONES PARA DISTINGUIR TYPE STRING, INT Y FLOAT
+    
+    if key_to_update == 1:
         new_value = input("Ingrese la nueva informacion: ")
         keys = list(to_update.keys())
         to_update[keys[key_to_update]] = new_value
+        updated_food = to_update
+        
+    elif key_to_update == 2:
+        new_value = input("Ingrese la nueva informacion: ")
+        keys = list(to_update.keys())
+        to_update[keys[key_to_update]] = float(new_value)
+        updated_food = to_update
+
+    elif key_to_update == 3:
+            new_ingredients = []
+            input_ingredients = input("'Enter' para comenzar a ingresar ingredientes. Luego 'fin' para terminar: ").lower()
+            while input_ingredients != "fin":
+                input_ingredients = input("Ingregiente / fin: ").lower()
+                if input_ingredients != 'fin': new_ingredients.append(input_ingredients)
+            keys = list(to_update.keys())
+            to_update[keys[key_to_update]] = new_ingredients
+            updated_food = to_update
+    
+    elif key_to_update == 4 or key_to_update == 5:
+        new_value = input("Ingrese la nueva informacion: ")
+        keys = list(to_update.keys())
+        to_update[keys[key_to_update]] = int(new_value)
+        updated_food = to_update
+
+                
+    elif key_to_update == 6:
+        new_value = input("Ingrese la nueva informacion: ")
+        keys = list(to_update.keys())
+        to_update[keys[key_to_update]] = True if new_value == "si" else False
         updated_food = to_update
     
 

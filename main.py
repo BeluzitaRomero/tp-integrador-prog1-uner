@@ -33,10 +33,10 @@ def main_function():
             
         case 4:
             crud.show_fast_food_list()
-            to_delete = (int(input("Ingrese el numero de la comida que desea modificar: "))) -1
+            to_update = (int(input("Ingrese el numero de la comida que desea modificar: "))) -1
             print("---------------------------------------------------------------")
 
-            update_element(crud.to_update(to_delete))
+            update_element(crud.to_update(to_update))
         
         case 5:
             crud.show_fast_food_list()
